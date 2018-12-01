@@ -9,6 +9,10 @@ app.use(compression());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/loaderio-dc29a9684008006e366d2851156dc49c', (req, res) => {
+  res.send('loaderio-dc29a9684008006e366d2851156dc49c');
+});
+
 app.use('/api/movies/:movieid/rating', 
   proxy({
     target: 'http://18.191.59.6/'
